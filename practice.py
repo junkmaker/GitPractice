@@ -1,9 +1,4 @@
-result = []
-for num1 in range(1, 10):
-    tmp = []
-    for num2 in range(1, 10):
-        tmp.append(f'{num1 * num2:2}')
-    result.append(tmp)
+result = [[f'{num1 * num2:2}' for num2 in range(1, 10)] for num1 in range(1, 10)]
 
-for row in result:
+for count, row in zip(range(1, 10), result):
     print(', '.join(row))
